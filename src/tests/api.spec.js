@@ -5,3 +5,8 @@ test('GET /health should return 200', async () => {
   const res = await apiContext.get('http://localhost:3000/health');
   expect(res.status()).toBe(200);
 });
+test('GET /hello should return 200', async () => {
+  const apiContext = await request.newContext();
+  const res = await apiContext.get('http://localhost:3000/hello');
+  expect(res.status()).toBe(200);
+});

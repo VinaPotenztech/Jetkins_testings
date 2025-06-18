@@ -8,4 +8,7 @@ app.get('/health', (req, res) => {
   res.status(200).json({ message: 'API is healthy ✅' });
 });
 
+app.get('/hello', (req, res) => {
+  res.status(200).json({ message: 'Hello World' });
+});
 export const lambdaHandler = serverless(app);
