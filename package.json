@@ -1,21 +1,22 @@
 {
-  "name": "api",
+  "name": "hello_world",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "hello world sample for NodeJS",
+  "main": "app.js",
+  "repository": "https://github.com/awslabs/aws-sam-cli/tree/develop/samcli/local/init/templates/cookiecutter-aws-sam-hello-nodejs",
+  "author": "SAM CLI",
+  "license": "MIT",
+  "dependencies": {
+    "@playwright/test": "^1.53.0",
+    "axios": ">=1.6.0",
+    "express": "^5.1.0",
+    "serverless-http": "^3.2.0"
+  },
   "scripts": {
-    "start": "node index.js",
     "test": "playwright test"
   },
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "express": "^5.1.0",
-    "jest": "^30.0.0",
-    "supertest": "^7.1.1"
-  },
   "devDependencies": {
-    "@playwright/test": "^1.53.0",
-    "playwright": "^1.53.0"
+    "chai": "^4.3.6",
+    "mocha": "^10.2.0"
   }
 }
