@@ -1,12 +1,10 @@
+// app.js
 import express from 'express';
 const app = express();
+const PORT = process.env.PORT || 3000;
 
-app.use(express.json());
-
-app.get('/api/health', (req, res) => {
-  res.status(200).send({ status: 'OK' });
+app.get('/hello', (req, res) => {
+  res.json({ message: 'Hello World' });
 });
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Server running on ${PORT}`));
-export default app;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
